@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Mr Hillary Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 5px;
+            padding: 5px;
+            background-image: url('images/image1.webp');
+            background-size: cover;
+            background-color: hsla(0, 0%, 5%, 0.171);
+            color: #333;
+        }
+        header {
+            background: #6c63ff;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        nav a:hover {
+            color: #0a0a0a; /*color on hover */
+            background-color: ;
+        } 
+        .nav-items {
+            list-style-type: none; /* Remove bullet points */
+            display: flex; /* Horizontal layout */
+            padding: 0; /* Remove default padding */
+        }
+
+        .nav-items li {
+            margin: 0 1px; /* Space between buttons */
+        }
+
+        .nav-items a {
+            display: inline-block; /* Make links behave like buttons */
+            padding: 4px 2px; /* Add padding for button size */
+            background-color: #fff; /* Button background color */
+            color: black; /* Text color */
+            text-decoration: none; /* Remove underline */
+            border-radius: 7px; /* Slightly rounded corners */
+            transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+        }
+
+        .nav-items a:hover {
+            background-color: #ddbf12; /* Darker shade on hover */
+            transform: translateY(-5px); /* Slight lift effect on hover */
+        }
+
+        .nav-items a:active {
+            transform: translateY(0); /* Reset lift effect when active */
+        }
+        .nav-container{
+            display: flex; 
+            align-items: center; 
+            width: 100%;
+            padding-top: 2px;
+            margin-right: auto;
+        } 
+        .profile-picture {
+            width: 150px; 
+            height: 150px; 
+            border-radius: 50%; /* Circular shape */
+            margin-right: 200px; /* Space between image and nav items */
+        }
+        .picture{
+            width: 700px; 
+            height: 300px; 
+            border-radius: 50%; 
+            margin-left: 400px; /* Space between image  */
+            padding-top: 0px;
+        
+        }
+        }
+        .homepage{
+            background-color: #fff;
+            padding-top: 1px;
+            margin-top: 0%;
+            height: 300px;
+            
+        }
+        .homepage p {
+            font-size: 20px;
+        }
+        section {
+            padding: 10px;
+            font-size: 20px;
+            margin: 10px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #f0f0f3;
+        }
+        .button {
+            background: #6c63ff;
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        #Programminglanguage {
+           position: relative; /* Position relative for the overlay */
+           background-image: url('images/image2.jpeg'); /*image path */
+           background-size: cover;
+           background-color: rgba(18, 115, 194, 0.425);
+           background-position: center;
+           padding: 10px 10px;
+           color: #f8f6f6;
+           font-size: 20px;
+        }
+        } 
+        .social-links a {
+            margin: 0 10px;
+            color: #6c63ff;
+            text-decoration: none;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            background: #6c63ff;
+            color: #fff;
+            border: none;
+            font-size: 22px;
+            border-radius: 50px;
+            padding: 10px;
+            size: 50%;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background: #ddbf12;
+        }
+        .form1{
+            border: 3px solid #ddbf12 ;
+            border-radius: 20px;
+            margin-bottom: 10px;
+
+        }
+        ul {
+            list-style-type: none; 
+            padding: 0;
+            
+        }
+        ul li {
+            position: relative;
+            padding-left: 25px; /* Space for the star */
+            margin-bottom: 10px;
+        }
+        ul li::before {
+            content: '*'; /* Star character */
+            position: absolute;
+            left: 0;
+            color: #ffcc00; /* Gold color for the star */
+            font-size: 1.5em; /* Size of the star */
+        }
+        .footer {
+            background: #6c63ff;
+            padding: 20px;
+            border-top: 1px solid #eaeaea;
+            text-align: center;
+        }
+        .project{
+            color:  #f4f3f8;
+        }
+
+        /* Transparent Sections */
+        .trasnparent{
+           background-color: rgba(18, 115, 194, 0.425); /* White with 60% opacity */
+           color: #eaeaea;
+        }
+        .social-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .social-links a {
+            text-decoration: none;
+            color: #fdfeff;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #e9e50e; /*color on hover */
+        }
+        .proffesional {
+            font-size: 40px;
+            color: #ddbf12;
+            overflow: hidden; /*overflow for animation */
+        }
+        .name {
+            display: inline-block;
+        }
+        .letter {
+            display: inline-block;
+            opacity: 0; /* Start invisible */
+            animation: appear 1.0s forwards; /* Animation for appearance */
+        }
+        .response-message {
+            display: none; /* Initially hidden */
+            position: fixed; /* Fixed positioning */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust for element's own dimensions */
+            width: 50%; /* 50% of the viewport width */
+            padding: 20px; 
+            background-color: #6c63ff;
+            color: white; 
+            border-radius: 20px;
+            text-align: center; 
+            z-index: 1000; /* On top of other content */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+        @keyframes appear {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .glow {
+            animation: glow 3.0s infinite alternate; /* Continuous glowing effect */
+        }
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0);
+                opacity: 1;
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(255, 0, 0, 1), 
+                opacity: 0.9;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+   <div class="nav-container">
+    <img src="images/profile.jpeg" alt="HILLARY" class="profile-picture">
+   <div class="nav-items"> 
+    <nav>
+        <a href="#Programminglanguage">Programming Language</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#Interest">Interest</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+   </div>
+  </div>
+</header>
+<div>
+</div>
+<div class="container">
+    <section id="homepage" class="homepage">
+        <h1 style="font-size: 30px;">M'IMPWI HILLARY MUCHUI</h1>
+        <p>JUNIOR SOFTWARE DEVELOPER</p>
+        <div class="proffesional">
+            <span class="name">
+                <span class="letter" style="animation-delay: 0s;">S</span>
+                <span class="letter" style="animation-delay: 0.1s;">O</span>
+                <span class="letter" style="animation-delay: 0.2s;">F</span>
+                <span class="letter" style="animation-delay: 0.3s;">T</span>
+                <span class="letter" style="animation-delay: 0.4s;">W</span>
+                <span class="letter" style="animation-delay: 0.5s;">A</span>
+                <span class="letter" style="animation-delay: 0.6s;">R</span>
+                <span class="letter" style="animation-delay: 0.7s;">E</span>
+                <span class="letter" style="animation-delay: 0.8s;"> </span>
+                <span class="letter" style="animation-delay: 0.8s;"> </span>
+                <span class="letter" style="animation-delay: 0.9s;">E</span>
+                <span class="letter" style="animation-delay: 1.0s;">N</span>
+                <span class="letter" style="animation-delay: 1.1s;">G</span>
+                <span class="letter" style="animation-delay: 1.2s;">I</span>
+                <span class="letter" style="animation-delay: 1.3s;">N</span>
+                <span class="letter" style="animation-delay: 1.4s;">E</span>
+                <span class="letter" style="animation-delay: 1.5s;">E</span>
+                <span class="letter" style="animation-delay: 1.6s;">R</span>
+            </span>
+        </div>
+        <img src="images/earth.png" alt="HILLARY" class="picture">
+    </section>
+    <section id="Programminglanguage" class ="Programminlanguage">
+        <h2><strong>Programming Language</strong></h2>
+        <p> Ask me anything on this programming language.</p>
+        <ul style="display: flex; text-align: center;">
+            <li>Python</li>
+            <li>C++</li>
+            <li>C</li>
+            <li>Kotlin</li>
+            <li>HTML</li>
+            <li>PHP</li>
+            <li>JavaScript</li>
+            <li>CSS</li>
+            <li>Visual Basic</li>
+        </ul>
+    </section>
+
+    <section id="about" class="trasnparent">
+        <h2>About Me</h2>
+        <p>Hi! I'm a passionate Junior Software Engineer with a year of hands-on experience in the tech industry, specializing in web development, networking, and software development. I thrive on transforming innovative ideas into functional, high-quality software solutions on world problems.
+            My journey in tech began while in campus, with a fascination for how software shapes our daily lives. This enthusiasm drives me to stay updated with the latest technologies and best practices. I have developed a strong foundation in programming languages such as C, C++, JavaScript, Python, and Java, and I'm adept at using frameworks like React and Node.js to build dynamic web applications.
+            I pride myself on my ability to deliver projects on time without compromising quality. My attention to detail and commitment to continuous learning ensure that I produce software that not only meets but exceeds expectations. I believe in the power of collaboration and actively engage with my team to share insights and tackle challenges head-on.
+            In addition to my technical skills, my strong communication abilities allow me to effectively convey complex concepts to both technical and non-technical stakeholders. I am excited about the opportunity to contribute to innovative projects and further develop my expertise in a dynamic environment.
+            Let’s connect and make the world of tech better and greater.
+            .</p>
+    </section>
+
+    <section id="education" class="trasnparent">
+        <h2>Educational Background</h2>
+        <p><strong>Bachelor of Science in Software Engineering</strong><br>
+        Murang'a University of Technology, 290-9-2023<br>
+        I managed a <strong> GPA of 3.7</strong><br>
+        Coursework: Data Structures, Algorithms, Web Development, Software developement, Mobile Developemnt, Database management Proffession and Ethics.</p>
+        <p>Download my CV: <a href="https://drive.google.com/file/d/1H1-iFjMwSlsoZrmkYyrehYWde-b5bqO2/view?usp=drive_link" class="button">Download CV</a></p>
+    </section>
+    <section id="Interest" class="trasnparent">
+        <h2>Interest</h2>
+          <p>I have been greatly impressed by machine learning and software developments. AI and machine learning gives me a great thrill and lust of wanting to know more and create the softwares to solve all kinds of human problems in current world.</p>
+    </section>
+
+    <section id="skills" class="trasnparent">
+        <h2>Skills</h2>
+        <ul>
+            <li>Languages: JavaScript, Python, Java, Visual Basi, C++, PHP</li>
+            <li>Frameworks: React, Node.js, React Native</li>
+            <li>Databases: MySQL, MongoDB</li>
+            <li>Tools: Git, Docker</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="trasnparent">
+        <h2>Projects</h2>
+        <ul class="project">
+            <li><a href="https://github.com/mrprincehillary"/project1" target="_blank" style="background-color:  #6c63ff;;">KNN-Algorithm recommender model</a> - This model recommends items based on the features or similarities using K-Nearest Neighbours algorithm.</li>
+            <li><a href="https://github.com/mrprincehillary"/project2" target="_blank" style="background-color:  #6c63ff;;">Online Restaurant System</a> - This system will run all operatons of an hotel in real time.</li>
+            <li><a href="https://github.com/mrprincehillary"/project3" target="_blank" style="background-color:  #6c63ff;;">Movie Recommender Model</a> - This model will reccomend a movies based on its rating and user preference.</li>
+        </ul>
+    </section>
+
+    <section id="contact"class="trasnparent">
+        <h2>Contact Me</h2>
+        <form id="contactForm" action="https://formspree.io/f/mnnqzldy" method="POST" enctype="text/plain" class="form1">
+            <input type="text" id="name" name="name" placeholder="Your Name" required >
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+            <div id="responseMessage" class="response-message"></div>
+        </form>
+
+        <div class ="footer">
+         <h3>Connect with me:</h3> 
+           <ul class="social-links">
+               <li><a href="https://github.com/mrprincehillary" target="_blank" title="GitHub"><i class="fab fa-github"></i>Github</a></li>
+               <li><a href="https://www.linkedin.com/in/m-impwi-hillary" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
+               <li><a href="https://x.com/MrMuchui" target="_blank" title="X"><i class="fab fa-twitter"></i>X</a></li>
+               <li><a href="https://www.facebook.com/profile.php?id=100078902197036" target="_blank" title="Facebook"><i class="fab fa-facebook"></i>Facebook</a></li>
+           </ul>
+       </div>
+    </section>
+
+</div>
+
+<script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+        // Add glow effect to each letter in software engineer
+        const letters = document.querySelectorAll('.letter');
+        letters.forEach((letter, index) => {
+            letter.style.animationDelay = `${index * 0.1}s`;
+            letter.classList.add('glow'); // Add glow class
+        });
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        // Get the input values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        // Process the form data (for demonstration, we will just display a thank you message)
+        const responseMessage = `Thank you, ${name}! Your message has been received.`;
+        
+        // Display the response message
+        const messageDiv = document.getElementById('responseMessage');
+        messageDiv.innerText = responseMessage;
+        messageDiv.style.display = 'block'; // Show the message
+        
+        // Hide the message after 5 seconds
+        setTimeout(() => {
+            messageDiv.style.display = 'none';
+        }, 3000);
+        
+        // Clear the form fields
+        document.getElementById('contactForm').reset();
+    });
+</script>
+
+</body>
+</html>
